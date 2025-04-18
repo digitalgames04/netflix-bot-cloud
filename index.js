@@ -15,16 +15,15 @@ app.post('/webhook', async (req, res) => {
   const clientStatus = await validateClient(from);
   if (!clientStatus.active) {
     return res.send({
-      message: `😕 Tu número no está activo. ${process.env.SUPPORT_LINK}`
-
+      message: `😕 Tu número no está activo. Contacta a tu tienda o proveedor.`
     });
   }
 
   return res.send({
     message: `👋 Hola ${clientStatus.name}, ¿cómo podemos ayudarte hoy?
 
-1️⃣ Info de mis cuentas
-2️⃣ Solicitar código`
+🔷 Info de mis cuentas
+🔷 Solicitar código`
   });
 });
 
