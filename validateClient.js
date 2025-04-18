@@ -1,6 +1,7 @@
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 
 module.exports = async function validateClient(phone) {
+  const creds = JSON.parse(process.env.GOOGLE_CREDENTIALS); // 👈 Esta línea es clave
   const doc = new GoogleSpreadsheet(process.env.SHEET_ID);
   await doc.useServiceAccountAuth(creds);
   await doc.loadInfo();
