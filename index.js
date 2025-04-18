@@ -3,6 +3,8 @@ const dotenv = require('dotenv');
 const validateClient = require('./validateClient');
 dotenv.config();
 
+console.log("Valor de TEST_VAR:", process.env.TEST_VAR);
+
 const app = express();
 app.use(express.json());
 
