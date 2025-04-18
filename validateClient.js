@@ -1,4 +1,4 @@
-const { GoogleSpreadsheet } = require('google-spreadsheet');
+console.log("Valor de process.env.GOOGLE_CREDENTIALS:", process.env.GOOGLE_CREDENTIALS);
 const creds = JSON.parse(process.env.GOOGLE_CREDENTIALS);
 
 
