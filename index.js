@@ -15,7 +15,8 @@ app.post('/webhook', async (req, res) => {
   const clientStatus = await validateClient(from);
   if (!clientStatus.active) {
     return res.send({
-      message: `😕 Tu número no está activo. Contacta a soporte: ${process.env.SUPPORT_LINK}`
+      message: `😕 Tu número no está activo. ${process.env.SUPPORT_LINK}`
+
     });
   }
 
