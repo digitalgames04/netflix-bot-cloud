@@ -1,0 +1,7 @@
+.env
+.env.save
+credentials.json
+sa-credentials.json
+test-gmail.js
+credentials.backup.json
+node_modules/
